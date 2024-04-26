@@ -1,0 +1,576 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* Controls the entire page */
+*{
+    /* Sets the margin and padding to 0 */
+    margin: 0;
+    padding: 0;
+}
+
+/* Controls everything within the body */
+body{
+    /* Changes the font to 'Poppins' */
+    font-family: "Poppins", sans-serif;
+}
+
+/* Controls the html page */
+html{
+    /* Makes the scroll smooth */
+    scroll-behavior: smooth;
+}
+
+/* Controls the paragraph text */
+p{
+    color: rgb(85, 85, 85);
+}
+
+/* Controls the page button movement transitions */
+a,
+.btn{
+    /* Makes all transitions take 300miliseconds and ease */
+    transition: all 300ms ease;
+}
+
+/* Desktop Navigation */
+nav{
+    /* Makes margins around the content */
+    justify-content: space-around;
+    /* Aligns the content so that it is centered */
+    align-items: center;
+    /* Sets the height of the navigation box */
+    height: 17vh;
+}
+
+/* Controls the navigation links of the desktop navigation menu */
+nav,
+.nav-links{
+    /* Displays the links horizontally */
+    display: flex;
+}
+
+.nav-links{
+    /* Creates a gap between each link of 2 font sizes */
+    gap: 2rem;
+    /* Removes the bullet points */
+    list-style: none;
+    /* Sets the text size to 1.5 of the font size */
+    font-size: 1.5rem;
+}
+
+/* Controls page referencing elements */
+a{
+    /* Sets the text colour to black */
+    color: black;
+    /* Sets the text decoration to none */
+    text-decoration: none;
+    /* Sets the text decoration  */
+    text-decoration-color: white;
+}
+
+/* When hovering over the links */
+a:hover{
+    /* Set the text colour to grey */
+    color: grey;
+    /* Creates an underline text decoration */
+    text-decoration: underline;
+    /* Creates an offset for the text underline*/
+    text-underline-offset: 1rem;
+    /* Sets the text decoration colour */
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+/* Controls the logo elements */
+.logo{
+    /* Sets the font size */
+    font-size: 2rem;
+}
+
+/* Controls the on hover of the logo element */
+.logo:hover{
+    /* Makes the cursor default */
+    cursor: default;
+    /* Makes the user unable to select the text */
+    user-select: none;
+}
+
+/* Hamburger Navigation Menu */
+#hamburger-nav{
+    /* Makes the hamburger menu not display */
+    display: none;
+}
+
+/* Controls the hamburger menu element */
+.hamburger-menu{
+    /* Sets the position to be relative to the users screen */
+    position: relative;
+    /* Sets the display to be inline */
+    display: inline-block;
+}
+
+/* Controls the hamburger icon */
+.hamburger-icon{
+    /* Makes the icon display horizontally */
+    display: flex;
+    /* Makes the flex direction column wise */
+    flex-direction: column;
+    /* Justify content so that theres space between */
+    justify-content: space-between;
+    /* Sets the height of the burger icon */
+    height: 24px;
+    /* Sets the width of the burger icon */
+    width: 30px;
+    /* Makes the cursor indicate that it can be clicked */
+    cursor: pointer;
+}
+
+/* Controls the span of the icon element (AKA the lines) */
+.hamburger-icon span{
+    /* Makes the width fill to the width of the element */
+    width: 100%;
+    /* Sets the height of the line */
+    height: 2px;
+    /* Sets the lines color to black */
+    background-color: black;
+    /* Controls the transition of the lines */
+    transition: all 0.3 ease-in-out;
+}
+
+/* Controls the hamburger menu-links */
+.menu-links{
+    /* Makes the position unchangeable */
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    background-color: white;
+    /* Fits the content within the container */
+    width: fit-content;
+    /* Sets the max height */
+    max-height: 0;
+    /* Makes the overflowing elements hidden */
+    overflow: hidden;
+    /* Sets the transition */
+    transition: all 0.3 ease-in-out;
+}
+
+/* Controls the menu links page references */
+.menu-links a{
+    /* Displays the links within the block */
+    display: block;
+    /* Creates space between the links and the outer container */
+    padding: 10px;
+    /* Makes the text align to the center */
+    text-align: center;
+}
+
+/* Controls the list element */
+.menu-links li{
+    /* Removes the bullet points */
+    list-style: none;
+}
+
+/* Makes the menu links open */
+.menu-links.open{
+    /* Sets the max height while open */
+    max-height: 300px;
+}
+
+/* Sets the first child transform position */
+.hamburger-icon.open span:first-child{
+    /* Rotates and moves the first span element */
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+/* Controls the 2nd span element */
+.hamburger-icon.open span:nth-child(2){
+    opacity: 0;
+}
+
+/* Controls the last span element */
+.hamburger-icon.open span:last-child{
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child{
+    transform: none;
+}
+.hamburger-icon span:nth-child(2){
+    opacity: 1;
+}
+.hamburger-icon span:last-child{
+    transform: none;
+}
+
+/* Sections */
+section{
+    /* Creates padding above all sections */
+    padding-top: 4vh;
+    /* Sets the height */
+    height: 80vh;
+    /* Creates a margin */
+    margin: 0 10rem;
+    /* Accounts for any border and padding values */
+    box-sizing: border-box;
+    /* Fits the content within the given space */
+    min-height: fit-content;
+}
+
+/* Controls the whole section container div */
+.section-container{
+    /* Displays inline with each element */
+    display: flex;
+    /* add a gap between items */
+    gap: 4rem;
+    /* sets the height */
+    height: 60%;
+}
+
+/* Controls the container for the profile picture */
+.section__pic-container{
+    /* Displays inline with each element */
+    display: flex;
+    /* Sets the width and height */
+    height: 400px;
+    width: 400px;
+    /* Creates a margin */
+    margin: auto 0;
+}
+
+/* Controls the sections text */
+.section__text{
+    /* Aligns the element to the center */
+    align-self: center;
+    /* Aligns the text */
+    text-align: center;
+}
+
+/* Controls the paragraph text of the sections */
+.section__text p{
+    /* Changes the font weight */
+    font-weight: 600;
+}
+
+/* Controls the sections lower paragraph text */
+.section__text__p1{
+    text-align: center;
+}
+
+/* Controls the sections secondary paragraph */
+.section__text__p2{
+    /* Sets the font size */
+    font-size: 1.75rem;
+    /* Sets a margin below the text */
+    margin-bottom: 1rem;
+}
+
+/* Controls the title  */
+.title{
+    height: 5rem;
+    font-size: 3rem;
+    text-align: center;
+}
+
+/* Controls the social network section */
+#socials-container{
+    /* Displays the content inline */
+    display: flex;
+    /* Justifies the content to the center */
+    justify-content: center;
+    /* Makes a margin above */
+    margin-top: 1rem;
+    /* Creates a gap between the items */
+    gap: 1rem;
+}
+
+/* Icons */
+.icon{
+    cursor: pointer;
+    height: 2rem;
+}
+
+/* Profile Section */
+#profile{
+    /* Displays inline */
+    display: flex;
+    /* Places all content within the center of the container */
+    justify-content: center;
+    /* Creates a gap of 5 font sizes */
+    gap: 5rem;
+    /* Sets the height for the profile section */
+    height: 80vh;
+}
+
+/* Buttons */
+/* Button container */
+.btn-container{
+    /* Displays the buttons inline */
+    display: flex;
+    /* Places the buttons in the center */
+    justify-content: center;
+    /* Creates a gap between the elements */
+    gap: 1rem;
+}
+
+/* Controls the buttons */
+.btn{
+    /* Sets the font weight */
+    font-weight: 600;
+    /* Makes the transition when moving on the page */
+    transition: all 300ms ease;
+    /* Padding */
+    padding: 1rem;
+    /* Width of the buttons */
+    width: 8rem;
+    /* Button outline */
+    border-radius: 2rem;
+}
+
+/* controls the individual buttons */
+.btn-color-1,
+.btn-color-2{
+    /* sets the outer lines color and thickness */
+    border: rgb(53,53,53) 0.1rem solid;
+}
+
+/* while hovering over either button */
+.btn-color-1:hover,
+.btn-color-2:hover{
+    /* sets the cursor to pointer */
+    cursor: pointer;
+}
+
+/* while hovering over btn2 */
+.btn-color-1,
+.btn-color-2:hover {
+    /* change the background color */
+    background: rgb(53, 53, 53);
+    color: white;
+}
+
+/* while hovering btn1 */
+.btn-color-1:hover{
+    background-color: black;
+}
+
+/* by default button 2 */
+.btn-color-2{
+    /* has no background */
+    background: none;
+}
+
+/* while hovering on btn2 */
+.btn-color-2:hover{
+    /* alsters the outline color,thickness */
+    border: white 0.1rem solid;
+}
+
+/* button container */
+.btn-container{
+    /* gap between stuff */
+    gap: 1rem;
+}
+
+.text-container{
+    padding-top: 3%;
+
+}
+
+.about-container{
+    display: flex;
+    gap: 10rem;
+    justify-content: center;
+}
+
+
+#about{
+    position: relative;
+}
+
+.about-container{
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.about-details-container{
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-container, 
+.about-details-container {
+    display: flex;
+}
+
+.about-pic{
+    border-radius: 2rem;
+}
+
+.arrow {
+    position: absolute;
+    right: -5rem;
+    bottom: 2.5rem;
+}
+
+.about-info{
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+
+}
+
+.text-container{
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+}
+
+.section-container{
+    gap: 4rem;
+    height: 80%;
+}
+
+.section__pic-container2{
+    /* Displays inline with each element */
+    display: flex;
+    /* Sets the width and height */
+    height: 300px;
+    width: 400px;
+    /* Creates a margin */
+    margin: auto 0;
+}
+
+/* EXPERIENCE SECTION */
+
+#experience{
+    position: relative;
+}
+
+.experience-sub-title{
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.experience-details-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.article-container{
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2,5rem;
+    justify-content: space-around;
+}
+
+article{
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+
+article .icon{
+    cursor: default;
+}
+
+.details-container{
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+}
+
+/* PROJECTS SECTION */
+
+#projects{
+    position: relative;
+}
+
+.color-container{
+    border-color: rgb(163, 163, 163);
+    background: rgb(250, 250, 250);
+}
+
+.project-img{
+    border-radius: 2rem;
+    width: 90%;
+    height: 90%;
+}
+
+.project-title{
+    margin: 1rem;
+    color: black;
+}
+
+.project-btn {
+    color:black;
+    border-color: rgb(163, 163, 163);
+    
+}
+
+/*  CONTACT PAGE */
+
+#contact{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.contact-info-upper-container{
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    margin: 2rem auto;
+    padding: 1.5rem;
+}
+
+.contact-info-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+.contact-info-container p{
+    font-size: larger;
+}
+
+.contact-icon{
+    cursor: default;
+    height: 3rem;
+}
+
+.email-icon {
+    height: 4rem;
+}
+
+/* FOOTER SECTION */
+
+footer{
+    height: 26vh;
+    margin: 0 1rem;
+}
+
+footer p{
+    text-align: center;
+}

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <title>My Porfolio</title>
+</head>
+<body>
+    <!-- Nav section (desktop nav) -->
+    <nav id="desktop-nav">
+        <!-- Logo div class -->
+        <div class="logo">L.Duarte</div>
+        <!--  Container for the navigation links -->
+    <div>
+        <!-- unordered list for the navigation links -->
+        <ul class="nav-links">
+            <!-- List item for page references -->
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    
+    </nav>
+    <!-- Nac section (Mobile Nav / Hamburger Nav) -->
+    <nav id="hamburger-nav">
+        <!-- Logo div class -->
+        <div class="logo">L.Duarte</div>
+        <!-- Container for the hamburger menu -->
+        <div class="hamburger-menu">
+            <!-- Creation of a hamburger icon which has onclick functionality -->
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <!-- Creates 3 lines for the icon -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Menu Links container  -->
+            <div class="menu-links">
+                <!-- Creates lister items which close the menu when clicked -->
+                <li><a href="#about"onclick="toggleMenu()">About</a></li>
+                <li><a href="#aexperience"onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects"onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact"onclick="toggleMenu()">Contact</a></li>
+            </div> 
+        </div>
+    </nav>
+    
+    <!-- Profile Section -->
+    <section id="profile">
+        <div class="section__pic-container">
+            <!-- creates an image element and retrieves the image from the asset folder -->
+            <img src="./assets/profile.png" alt="Profile Picture" draggable="false">    
+        </div> 
+        <!-- text section -->
+        <div class="section__text">
+            <!-- paragraph text -->
+            <p class="section__text__p1">Hello, I'm</p>
+            <!-- header text -->
+            <h1 class="title"> Leonardo Duarte</h1>
+            <!-- Paragraph text -->
+            <p class="section__text__p2"> Upcoming Programmer</p>
+            <!-- button container -->
+            <div class="btn-container">
+                <!-- on click button with resume -->
+                <button class="btn btn-color-2" onclick="window.open('./assets/resume.pdf')">
+                    Download CV
+                </button>
+                <!-- on click button which takes them to the contact section -->
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                    Contact Info
+                </button>
+            </div>
+            <!-- social networks/connections container -->
+            <div class="socials-container">
+                <!-- logos and on click links to profile -->
+                <img src="./assets/twitch.png" alt="My Twitch Profile" class="icon" draggable="false" onclick="location.href='https://www.twitch.tv/bananaman2ez'"/>
+
+            </div>
+        </div>
+        
+
+    </section>
+
+    <section id="about">
+        <p class="section__text__p1">Get to Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="section__pic-container2">
+                <img src="./assets/600px-BananaMan_EpicLAN.jpg" alt="About Picture" class="about-pic" draggable="false">
+            </div>
+            <div class="about-details-container">
+                <div class="about-container">
+                    <div class="about-info">
+                        <img src="./assets/experience.webp" alt="Experience icon" draggable="false" class="about-icon">
+                        <h3>Experience</h3>
+                        <p>3 Years Programming. <br /> 5+ Years managerial work in different industries. </p>
+                        <p>8+ Years content creation, social media management, community building, public speaking. </p>
+                    </div>
+                    <div class="about-info">
+                        <img src="/assets/book.webp" alt="Education icon" draggable="false" class="about-icon">
+                        <h3>Education</h3>
+                        <p> Programming Student at University of East London. </br>Qualifications in A-levels, GCSE.</p>
+                        <p>Qualification in Logistics.</p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>
+                       I go around by the nickname of Leo or my online alias depending on the environment, I was born in Brazil and lived half of my life there, while the other half is split between the United States and now here in England. I been playing video games since the age of 4, I'm very grateful my parents and old brother supported my decision into attempting to play video games as a career, I may not have been the best player, but I'm definitely proud with my achievements in my respective game and only a few will ever accomplish what I have as both a player and a coach. This was by far the best experience in my life which allowed me to develop new skills within the IT, Content Creation, Marketing, Video Editing departments. After I decided to close that chapter of my life, I needed to do something new and productive that would still keep me in touch with my passion for video games, that's when the idea of creating games struck my mind, since then the last 3 years I've been dedicating myself to studying different coding languages and creating multiple different projects, including this page you're reading right now!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/main_arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'">
+    </section>
+
+    <section id="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            <div class="about-container">
+                <div class="details-container">
+                  <h2 class="experience-sub-title">Programming Languages</h2>
+                  <div class="article-container">
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>C++</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>C#</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>CSS</h3>
+                            <p>Beginner</p>
+                        </div>
+                    </article>
+                  </div>  
+                </div>
+                <div class="details-container">
+                  <h2 class="experience-sub-title">Software Experience</h2>
+                  <div class="article-container">
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>Unreal Engine</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>Unity</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>Visual Studio</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                        <div>
+                            <h3>Visual Studio Code</h3>
+                            <p>Beginner</p>
+                        </div>
+                    </article>
+                  </div>  
+                </div>
+            </div>
+        </div>
+        <img src="./assets/main_arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'">
+    </section>
+
+    <section id="projects">
+        <P class="section__text__p1"> Browse My Recent</P>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+            <div class="about-container">
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./assets/Project 1.png" alt="Project 1" class="project-img">
+                </div>
+                <h2 class="experience-sub-title project-title">2D Shooter</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project btn" onclick="location.href='https://uelac-my.sharepoint.com/:u:/r/personal/u2200386_uel_ac_uk/Documents/C++%20Game%20Programming/RaylibProject_GAME_FINAL.rar?csf=1&web=1&e=dLL2gf'">
+                        Zip File
+                    </button>
+                </div>
+            </div>
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./assets/Project 2.png" alt="Project 1" class="project-img">
+                </div>
+                <h2 class="experience-sub-title project-title">2.5D Platform Shooter</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project btn" onclick="location.href='https://uelac-my.sharepoint.com/:u:/r/personal/u2200386_uel_ac_uk/Documents/Group_Game/Mech_Game_8.zip?csf=1&web=1&e=rUgQSV'">
+                        Zip File
+                    </button>
+                </div>
+            </div>
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./assets/Project 3.png" alt="Project 1" class="project-img">
+                </div>
+                <h2 class="experience-sub-title project-title">CSS Portfolio</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project btn" onclick="location.href='https://github.com/BananaMan2ez'">
+                        Github
+                    </button>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/main_arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'">
+    </section>
+
+    <section id="contact">
+        <p class="section__text__p1"> Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon">
+                <p><a href="mailto:Leosodu@hotmail.com">leosodu@hotmail.com</a></p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <!-- List item for page references -->
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2024 Leonardo Duarte. All Rights Reserved.</p>
+    </footer>
+
+
+
+    <!-- including the javascript -->
+        <script src="script.js"></script>
+
+    
+</body>
+</html>
